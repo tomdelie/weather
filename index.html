@@ -5,25 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animation.css">
 </head>
-<body> 
+<body>
+  <div class="sun"></div>
+  <img class="cloud c2" src="images/cloud.svg" width="170">
+  <img class="cloud c1" src="images/cloud.svg" width="200">
+  <img class="cloud c3" src="images/cloud.svg" width="140">
+  <img class="cloud c4" src="images/cloud.svg" width="260">
+  <img class="cloud c5" src="images/cloud.svg" width="180">
+
   <main>
 
     <div class="container">
-      <h1>Météo</h1>
-      <div class="search">
-        <input id="searchInput" type="text" placeholder="Paris, New York, Tokyo...">
-        <button id="searchButton">Rechercher</button>
-      </div>
+      <div class="card">
 
-      <div class="weather-card hidden">
-        <h2 id="city"></h2>
+        <form class="search">
+          <input id="searchInput" type="text" placeholder="Paris, New York, Tokyo...">
+          <button type="submit"><img src="images/search.svg" alt="Search icon" width="24"></button>
+        </form>
+        
         <div class="weather">
-          <img id="icon" src="" width="60">
-          <span id="temp"></span>
-        </div>
-      </div>
 
+          <img id="icon" src="https://openweathermap.org/img/wn/02d@4x.png" width="100">
+
+          <div class="temp">
+            <span class="temp-value">-</span>
+            <span>℃</span>
+          </div>
+
+          <div class="stats">
+
+            <div>
+              <h2>Humidity</h2>
+              <div class="humidity">
+                <span class="humidity-value">-</span>
+                <span>%</span>
+              </div>
+            </div>
+
+            <div>
+              <h2>Wind speed</h2>
+              <div class="wind">
+                <span class="wind-value">-</span>
+                <span>km/h</span>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+
+      </div>
     </div>
 
   </main>
