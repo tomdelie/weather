@@ -22,7 +22,7 @@
 }
 
 .c4 {
-  bottom: 12rem;
+  bottom: 6rem;
   left: 50vw;
   animation: 400s cloud linear infinite;
 }
@@ -33,16 +33,21 @@
   animation: 110s cloud linear infinite;
 }
 
-.sun {
+.sun-wrapper {
   position: absolute;
-  top: 10%;
-  right: 30%;
-  width: 300px;
-  height: 300px;
+  width: 90%;
+  top: 55%;
+  left: -45%;
+  animation: 10s rotate linear infinite;
+  transform-origin: bottom right;
+}
+
+.sun {
+  width: 200px;
+  height: 200px;
   border-radius: 999rem;
   background-color: #EB6E4B;
   filter: drop-shadow(0px 0px 16px rgba(235, 110, 75, 0.4));
-  animation: 25s sun ease-in-out infinite;
 }
 
 @keyframes cloud {
@@ -54,14 +59,43 @@
   }
 }
 
-@keyframes sun {
+@keyframes rotate {
   0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(30px, 15px);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate(0px, 0px);
+    transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .sun-wrapper {
+    width: 75%;
+    top: 60%;
+    left: -25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sun-wrapper {
+    width: 70%;
+    top: 70%;
+    left: -20%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sun-wrapper {
+    width: 65%;
+    top: 80%;
+    left: -15%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .sun-wrapper {
+    width: 60%;
+    top: 100%;
+    left: -10%;
   }
 }

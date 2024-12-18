@@ -1,0 +1,31 @@
+body {
+  background: linear-gradient(45deg, #8BD6F6 0%, #0060ED 100%);
+  overflow: hidden;
+}
+
+.sun-wrapper {
+  position: absolute;
+  width: 30%;
+  top: 70%;
+  left: 20%;
+  animation: 10s rotate linear infinite;
+  transform-origin: bottom right;
+  border: 1px solid red;
+}
+
+.sun {
+  width: 200px;
+  height: 200px;
+  border-radius: 999rem;
+  background-color: #EB6E4B;
+  filter: drop-shadow(0px 0px 16px rgba(235, 110, 75, 0.4));
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
